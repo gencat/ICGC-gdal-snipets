@@ -1,4 +1,4 @@
-# GDAL Snipets
+# GDAL Snippets
 
 #### Useful examples working with [GDAL](http://www.gdal.org/)
 
