@@ -82,6 +82,10 @@ Convert and reproject Geopackge to MbTiles (vector-tiles)  GDAL>= 2.4
 ogr2ogr -f MVT output.mbtiles input.gpkg -s_srs EPSG:4326 -t_srs EPSG:3857 -dsco MAXZOOM=20 -dsco MINZOOM=12 -dsco FORMAT=MBTILES -dsco MAX_SIZE=1500000 -dsco NAME=output_name_dataset -dsco EXTENT=8192 -lco NAME=output_name_layer -lco MAXZOOM=20 -lco MINZOOM=12
 ```
 
+Convert PostGIS to MbTiles (vector-tiles)  GDAL>= 2.4
+```bash
+ogr2ogr -f MBTILES -dsco MINZOOM=7 -dsco MAXZOOM=22 /home/geostart/file.mbtiles "PG:host=127.0.0.1 user=postgres password=xxxxxx dbname=postgres_dbname sslmode=disable" public.viewxxx
+```
 
 Convert Shapefile to MbTiles (vector-tiles)  GDAL>= 2.4
 ```bash
